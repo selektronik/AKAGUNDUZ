@@ -1,0 +1,8 @@
+function adminhomeController($scope, $location) {
+	
+	
+}
+
+
+
+

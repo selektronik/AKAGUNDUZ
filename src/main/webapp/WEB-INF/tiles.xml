@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+
+	<!-- Master Admin -->
+	<definition name="master-admin.page" template="/public/template/master-admin.jsp">
+		<put-attribute name="header-admin" value="/public/template/header-admin.jsp" />
+		<put-attribute name="footer-admin" value="/public/template/footer-admin.jsp" />
+	</definition>
+
+
+	<!-- Pages -->
+	<definition name="welcomePage" extends="master-admin.page">
+		<put-attribute name="body-admin" value="/protected/welcomePage.jsp" />
+	</definition>
+
+	<definition name="articleList" extends="master-admin.page">
+		<put-attribute name="body-admin" value="/protected/articles/articles.jsp" />
+	</definition>
+
+
+	<definition name="userList" extends="master-admin.page">
+		<put-attribute name="body-admin" value="/protected/users/users.jsp" />
+	</definition>
+
+
+	<definition name="login" extends="master-admin.page">
+		<put-attribute name="header-admin" value="" />
+		<put-attribute name="footer-admin" value="" />
+		<put-attribute name="body-admin" value="/public/login.jsp" />
+	</definition>
+
+
+</tiles-definitions>
